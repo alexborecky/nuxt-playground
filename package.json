@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-playground",
+  "version": "1.0.0",
+  "description": "My fantabulous Nuxt.js project",
+  "author": "Alex",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.0.6",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "fibers": "^5.0.0",
+    "prettier": "^1.19.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
+  }
+}
