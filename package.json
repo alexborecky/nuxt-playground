@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "locomotive-scroll": "^4.0.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-vimeo-player": "^0.1.2"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",

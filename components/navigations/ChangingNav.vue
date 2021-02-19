@@ -2,22 +2,28 @@
     <div class="changing-nav full-width" :class="{'colorNav' : $route.path == '/fixed-scroll'}">
         <div class="container flex flex-right">
             <ul class="flex center">
-                <li><nuxt-link to="/">Home</nuxt-link></li>
-                <li><nuxt-link to="/test-page">Test page</nuxt-link></li>
-                <li><nuxt-link to="/fixed-scroll">Fixed Scroll</nuxt-link></li>
-                <!-- <li><nuxt-link to="/">This is link</nuxt-link></li>
-                <li><nuxt-link to="/">This is link</nuxt-link></li> -->
+                <li
+                    v-for="item in items" 
+                    :key="item.link"
+                >
+                    <nuxt-link 
+                        :to="item.link">
+                        {{item.title}}
+                    </nuxt-link>
+                </li>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
+import items from '@/assets/data/navigation.js'
     export default {
         name: 'ChangingNav',
         data () {
             return {
-                colorNav: false
+                colorNav: false,
+                items: items
             }
         },
     }
