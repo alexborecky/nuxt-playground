@@ -13,7 +13,7 @@
                     smooth: true,
                     direction: 'horizontal',
                 },
-                }"
+            }"
             >
             <div class="example horizontal">
                 <header data-scroll-section>

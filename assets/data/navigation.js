@@ -16,4 +16,8 @@ export default
             title: 'Video',
             link: '/video'
         },                
+        {
+            title: 'Nefrit',
+            link: '/nefrit'
+        },                
 ]
