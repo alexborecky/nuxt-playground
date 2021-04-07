@@ -29,12 +29,15 @@
 // }
 
 
+.selection:last-child label {
+    background: none;
+}
+
 .selection input[type="radio"] {
   display: none;
 }
 
 .selection label {
-    background-color: #ddd;
     padding: 4px 11px;
     font-family: Arial;
     font-size: 16px;
