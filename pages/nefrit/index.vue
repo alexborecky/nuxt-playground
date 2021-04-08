@@ -14,6 +14,18 @@
                     :img="option.img"
                 />
                 </div>
+                <h3>Zarovnání textu</h3>
+                <div class="text flex">
+                <Selection 
+                    v-for="selection in selections" :key="selection.title"
+                    :id="selection.id"
+                    :value="selection.value"
+                    :forID="selection.id"
+                    :title="selection.title"
+                    :onChange="() => selectedSelection = selection"
+                    :img="selection.img"
+                />
+                </div>
                 <br> <br>
                 <!-- <input name="radio-button" type="radio" id="four" value="ShowRightPanel = true" v-model="heroPanel">
                 <label for="four">Doprava</label>
@@ -28,6 +40,7 @@
                 <h4>
                     <span class="punct">&lt;</span>script<span class="punct">></span><br>
                     <span class="reg">{{selectedOption && selectedOption.value}} <br></span>
+                    <span class="reg">{{selectedSelection && selectedSelection.value}} <br></span>
                     <span class="punct">&lt;</span>/script<span class="punct">></span>
                 </h4>
             </div>
@@ -38,11 +51,14 @@
 <script>
 
 import mockData from '@/assets/data/test.js'
+import dataTwo from '@/assets/data/test2.js'
     export default {
         data () {
             return {
                 selectedOption: null,
+                selectedSelection: null,
                 options: mockData,
+                selections: dataTwo,
                 picked: '',
                 heroPanel: '',
                 model: '',
