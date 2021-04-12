@@ -1,6 +1,6 @@
 <template>
     <div class="hero flex column">
-        <div class="container flex">
+        <div class="container">
             <div class="form flex column">
                 <h3>Zarovnání textu</h3>
                 <div class="text flex">
@@ -18,12 +18,20 @@
                 <div class="text flex">
                 <Selection 
                     v-for="selection in selections" :key="selection.title"
+                    :sectionTitle="selection.sectionTitle"
                     :id="selection.id"
                     :value="selection.value"
                     :forID="selection.id"
                     :title="selection.title"
                     :onChange="() => selectedSelection = selection"
                     :img="selection.img"
+                />
+                <Selection 
+                    name="radio-background"
+                    title='Výchozí'
+                    id='vychozi-pozadi'
+                    forID="vychozi-pozadi"
+                    img='https://ik.imagekit.io/alexborecky/shoptetak/Docs/eas/Screenshot_2021-04-08_at_10.43.09_RcTiI1XL8.png'
                 />
                 </div>
                 <br> <br>
@@ -38,11 +46,16 @@
                 <br> -->
 
                 <h4>
-                    <span class="punct">&lt;</span>script<span class="punct">></span><br>
-                    <span class="reg">{{selectedOption && selectedOption.value}} <br></span>
+                    <span class="punct">&lt;</span>script<span class="punct">></span><br v-if="selectedOption">
+                    <span class="reg">{{selectedOption && selectedOption.value}} <br v-if="selectedSelection => null"></span>
                     <span class="reg">{{selectedSelection && selectedSelection.value}} <br></span>
                     <span class="punct">&lt;</span>/script<span class="punct">></span>
                 </h4>
+            </div>
+            <div class="qaa">
+                <Accordion />
+                <Accordion />
+                <Accordion />
             </div>
         </div>
     </div>
@@ -91,6 +104,11 @@ import dataTwo from '@/assets/data/test2.js'
 .reg {
     color: blue;
     margin: 8px 16px;
+}
+
+.qaa {
+    padding: 40px 0;
+    height: 800px;
 }
 
 </style>

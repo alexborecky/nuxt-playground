@@ -1,5 +1,6 @@
 <template>
     <div class="flex column center selection">
+        <h3>{{sectionTitle}}</h3>
         <input name="radio-button" type="radio" :id="id" :value="value" @change="() => onChange(value)">
         <label class="flex column center" :for="forID">
         <img :src="img" alt="">{{title}}
@@ -10,7 +11,7 @@
 <script>
     export default {
         name: 'Selection',
-        props: ['id', 'value', 'model', 'forID', 'title', 'heroPanel', 'onChange', 'img'],
+        props: ['id', 'value', 'model', 'forID', 'title', 'heroPanel', 'onChange', 'img', 'sectionTitle'],
         methods: {
             log: console.log
         }

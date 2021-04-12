@@ -24,7 +24,7 @@ export default
         {
             title: 'Výchozí',
             id: 'yes',
-            value: '',
+            value: null,
             model: 'heroPanel',
             img: ''
         },
